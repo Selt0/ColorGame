@@ -88,11 +88,15 @@ function playRound(n) {
     squares[i].onclick = function () {
       if (pickedColor == this.style.backgroundColor) {
         message.textContent = 'Correct!';
+        message.style.color = '#6aff6a';
+        message.style.backgroundColor = '#464a4a';
         changeColors(pickedColor);
         newColorbtn.textContent = 'Play again?';
       } else {
         this.classList.add('animate__animated', 'animate__bounceOut');
         message.textContent = 'Try Again';
+        message.style.color = '#ffa700';
+        message.style.backgroundColor = 'inherit';
       }
     };
   }
