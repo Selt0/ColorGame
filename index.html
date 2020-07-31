@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Color Game</title>
-		<!-- CUSTOM CSS -->
-		<link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Game</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="styles.css" />
 
-		<!-- bootstrap -->
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-			crossorigin="anonymous"
-		/>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
-		<!-- Google fonts -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
-			rel="stylesheet"
-		/>
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-		<!-- ANIMATE -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-		/>
-	</head>
-	<body>
-		<div class="welcome">
-			<div class="container text-center" id="welcome">
-				<h1 class="display-2">Welcome to the Color Game!</h1>
-				<br />
-				<p>Try to guess the color based on the RGB or hexadecimal numbers</p>
-				<button type="button" class="btn btn-warning" id="playNow">
-					Play now!
-				</button>
-			</div>
-		</div>
-		<div id="game">
-			<header>
-				<h3 id="rgb" class="display-4">RGB</h3>
-				<h3 id="hex">HEX</h3>
-			</header>
-		</div>
-		<script src="main.js"></script>
-	</body>
+    <!-- ANIMATE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+  </head>
+  <body id="body">
+    <div class="welcome">
+      <div class="container text-center" id="welcome">
+        <h1 class="display-2">Welcome to the Color Game!</h1>
+        <br />
+        <p>Try to guess the color based on the RGB or hexadecimal numbers</p>
+        <button type="button" class="btn btn-warning" id="playNow">
+          Play now!
+        </button>
+      </div>
+    </div>
+    <div id="game">
+      <header id="header">
+        <h3 id="hex" class="display-4">HEX</h3>
+        <h3 id="rgb" class="display-4">RGB</h3>
+        <div class="strip">
+          <div id="difficulty">
+            <button class="btn btn-secondary" id="easy">Easy</button>
+            <button class="btn btn-primary active" id="hard" disabled>Hard</button>
+          </div>
+          <span id="message"></span>
+          <button class="btn btn-dark" id="newColor">New Colors</button>
+        </div>
+      </header>
+      <div class="container">
+        <div class="squares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square hard"></div>
+          <div class="square hard"></div>
+          <div class="square hard"></div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
